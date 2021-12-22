@@ -1,49 +1,13 @@
 html, body {
     height: 100%;
   }
-  
-  .floatleft {
-    float: left;
-  }
-  
-  .floatright {
-    float: right;
-  }
-  
-  .alignleft {
-    float: left;
-    margin-right: 15px;
-    margin-bottom: 15px;
-  }
-  
-  .alignright {
-    float: right;
-    margin-left: 15px;
-    margin-bottom: 15px;
-  }
-  
-  .aligncenter {
-    display: block;
-    margin: 0 auto 15px;
-  }
-  
-  a:focus {
-    outline: 0px solid;
-  }
+
   
   img {
     max-width: 100%;
     height: auto;
   }
   
-  .fix {
-    overflow: hidden;
-  }
-  
-  p {
-    margin: 0 0 15px;
-    color: #444;
-  }
   
   h1, h2, h3, h4, h5, h6 {
     font-family: "Raleway", sans-serif;
@@ -82,19 +46,7 @@ html, body {
     line-height: 20px;
   }
   
-  a {
-    transition: all 0.3s ease 0s;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    color: #3EC1D5;
-    text-decoration: none;
-  }
-  
-  a:active, a:hover {
-    outline: 0 none;
-  }
+
   
   body {
     background: #fff none repeat scroll 0 0;
@@ -107,68 +59,22 @@ html, body {
   }
 
 
-  
-  /*--------------------------------------------------------------
-# Hero Section
---------------------------------------------------------------*/
-#hero {
-    width: 100%;
-    height: 80vh;
-    background: #000;
-    overflow: hidden;
-    position: relative;
-  }
-  #heroCarousel > div > div > div > div > img {
-    max-width: 15%;
-    height: auto;
-}
-  @media (max-height: 500px) {
-    #hero {
-      height: 100vh;
-    }
-  }
-  #hero .carousel, #hero .carousel-inner, #hero .carousel-item, #hero .carousel-item::before {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-  }
-  #hero .carousel-item {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-  #hero .carousel-item::before {
-    content: "";
-    background-color: rgba(0, 0, 0, 0.8);
-  }
-  #hero .carousel-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    bottom: 0;
-    top: 20px;
-    left: 50px;
-    right: 50px;
-  }
-  #hero .container {
-    text-align: center;
-  }
-  #hero h2 {
-    color: #d7b044;
-    margin-top: 70px;
+  /* Banner Section*/
+  .center_image{
+    display: block !important;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
     margin-bottom: 20px;
-    font-size: 60px;
-    font-weight: 700;
-  }
-  @media (max-width: 768px) {
-    #hero h2 {
-      font-size: 30px;
-      line-height: 1.2;
+    width: 07%;
     }
+
+  .imagebanner{
+    width: 100vw;
   }
+  /* Banner Section*/
+  
+
 
  /* Heading Style */
  h1 {
