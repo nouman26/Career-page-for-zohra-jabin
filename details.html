@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <link rel="icon" href="/Images/favicon.png" type="image/gif" sizes="16x16">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Yinka Enoch Adedokun">
+        <title>Quiz World</title>
+        <link rel="stylesheet" href="detailStyle.css">
+        <link rel="stylesheet" href="build/css/intlTelInput.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+        
+
+    </head>
+    <body>
+        <!-- Main Content -->
+        <div>
+			<img style="width: 20%;" src="./ZJ-Logo.png" alt="" class="center">
+            <div class="main-content bg-success text-center">
+                <div class="col-md-4 text-center company__info">
+                    <span class="company__logo">
+                        <img style="width: 70%;" src="./ZJ-Logo.png" alt="Company logo">
+                </div>
+                <div class="col-md-8 col-xs-12 col-sm-12 login_form ">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <h2>Details</h2>
+                        </div>
+                        <div class="row">
+                            <form control="" class="form-group" method="POST" action="/class">
+                                <div class="row">
+                                    <input type="text" name="firstname" id="firstname" class="form__input" placeholder="First Name" required>
+                                </div>
+                                <div class="row">
+                                    <input type="text" name="lastname" id="lastname" class="form__input" placeholder="Last Name" >
+                                </div>
+                                <div class="row">
+                                    <input type="email" name="email" id="email" class="form__input" placeholder="Email" required>
+                                </div>
+                                <div class="row">
+                                    <input id="phone" name="phone"  class="form__input" type="tel">
+                                </div>
+
+                                <div class="row">
+                                    <input id="f02" type="file" placeholder="Add Resume" required />
+                                    <label for="f02">Add Resume</label>
+                                </div>
+                                <div class="row">
+                                    <input type="submit" value="Submit" class="btn">
+                                </div>
+                            </form>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+            <!--***********************Footer Start *********************-->
+            <div class="copyright">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-sm-6">
+                        © 2021 Zohra Jabin. All Rights Reserved.
+                    </div>
+                    <div class="col-sm-6">
+                        <a href="#" target="_blank"><i class="fa fa-facebook fa-1x"></i></a>
+                        <a href="#" target="_blank"><i class="fa fa-instagram fa-1x"></i></a>						
+                    </div>
+                  </div>
+                </div>
+              </div>
+<!-- =============== Footer end ====================-->
+    
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script src="./js.js"></script>
+<script src="build/js/intlTelInput.js"></script>
+<script>
+  var input = document.querySelector("#phone");
+  window.intlTelInput(input, {
+    preferredCountries: ['pk'],
+    utilsScript: "build/js/utils.js",
+  });
+
+  $("[type=file]").on("change", function(){
+  // Name of file and placeholder
+  var file = this.files[0].name;
+  var dflt = $(this).attr("placeholder");
+  if($(this).val()!=""){
+    $(this).next().text(file);
+  } else {
+    $(this).next().text(dflt);
+  }
+});
+</script>
+</body>
+</html>
